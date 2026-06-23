@@ -167,3 +167,39 @@ max-width:900px;
 margin:15px auto;
 font-size:1.1rem;
 }
+
+.navbar{
+background:#020817;
+padding:15px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.logo{
+font-size:1.4rem;
+font-weight:bold;
+color:#00d4ff;
+}
+
+.navbar ul{
+display:flex;
+list-style:none;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.navbar a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+transition:0.3s;
+}
+
+.navbar a:hover{
+color:#00d4ff;
+}
