@@ -31,8 +31,9 @@ padding:20px;
 }
 
 .hero h1{
-font-size:4rem;
-margin-bottom:20px;
+text-shadow:
+0 0 15px #00d4ff,
+0 0 30px #00d4ff;
 }
 
 .tagline{
@@ -84,17 +85,21 @@ gap:25px;
 }
 
 .card{
-background:#0f172a;
+background:rgba(15,23,42,0.95);
 padding:25px;
 border-radius:20px;
 text-decoration:none;
 color:white;
-transition:0.3s;
-border:1px solid rgba(255,255,255,0.1);
+transition:0.4s;
+border:1px solid rgba(0,212,255,0.25);
+box-shadow:0 0 20px rgba(0,212,255,0.08);
+overflow:hidden;
+position:relative;
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 0 30px rgba(0,212,255,0.35);
 }
 
 .card h3{
@@ -181,9 +186,10 @@ border-bottom:1px solid rgba(255,255,255,0.1);
 }
 
 .logo{
-font-size:1.4rem;
+font-size:1.5rem;
 font-weight:bold;
 color:#00d4ff;
+text-shadow:0 0 10px #00d4ff;
 }
 
 .navbar ul{
@@ -202,4 +208,9 @@ transition:0.3s;
 
 .navbar a:hover{
 color:#00d4ff;
+}
+
+body{
+background:
+radial-gradient(circle at top,#112240,#050816 60%);
 }
