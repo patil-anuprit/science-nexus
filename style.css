@@ -501,7 +501,7 @@ transform:translateY(0px);
 }
 
 .card{
-animation:float 6s ease-in-out infinite;
+animation:none;
 }
 
 /* Glow Divider */
@@ -541,4 +541,215 @@ font-size:1rem;
 grid-template-columns:1fr;
 }
 
+}
+
+
+/* ================================= */
+/* SCIENCE NEXUS PREMIUM EFFECTS */
+/* Paste BELOW previous code */
+/* ================================= */
+
+/* Animated Background Glow */
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at 10% 20%,rgba(0,212,255,0.08),transparent 25%),
+radial-gradient(circle at 80% 30%,rgba(0,255,170,0.08),transparent 25%),
+radial-gradient(circle at 50% 90%,rgba(59,130,246,0.08),transparent 25%);
+pointer-events:none;
+z-index:-1;
+animation:bgMove 20s linear infinite;
+}
+
+@keyframes bgMove{
+0%{
+transform:translateY(0px);
+}
+50%{
+transform:translateY(-30px);
+}
+100%{
+transform:translateY(0px);
+}
+}
+
+/* Logo Glow */
+
+.logo{
+font-weight:800;
+font-size:1.4rem;
+color:#00d4ff;
+text-shadow:
+0 0 10px #00d4ff,
+0 0 20px #00d4ff;
+}
+
+/* Fancy Card Borders */
+
+.card{
+border:1px solid rgba(0,212,255,0.15);
+}
+
+.card:hover{
+border-color:#00d4ff;
+}
+
+/* Science Badge Style */
+
+.science-badge{
+display:inline-block;
+padding:8px 16px;
+border-radius:30px;
+background:rgba(0,212,255,0.15);
+border:1px solid rgba(0,212,255,0.4);
+margin:5px;
+font-size:0.9rem;
+}
+
+/* Hero Title Animation */
+
+.hero h1,
+.page-hero h1{
+animation:heroGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes heroGlow{
+from{
+text-shadow:
+0 0 10px #00d4ff,
+0 0 20px #00d4ff;
+}
+to{
+text-shadow:
+0 0 20px #00d4ff,
+0 0 40px #00d4ff,
+0 0 60px #00d4ff;
+}
+}
+
+/* Timeline Cards */
+
+.timeline-card{
+padding:25px;
+border-left:4px solid #00d4ff;
+margin:20px 0;
+background:rgba(255,255,255,0.04);
+border-radius:12px;
+}
+
+/* Table Styling */
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+th,td{
+padding:12px;
+border:1px solid rgba(255,255,255,0.15);
+}
+
+th{
+background:rgba(0,212,255,0.15);
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-track{
+background:#020617;
+}
+
+::-webkit-scrollbar-thumb{
+background:#00d4ff;
+border-radius:20px;
+}
+
+/* Selection Color */
+
+::selection{
+background:#00d4ff;
+color:black;
+}
+
+/* Footer Glow */
+
+footer{
+box-shadow:
+0 0 30px rgba(0,212,255,0.15);
+}
+
+/* Image Hover (for future images) */
+
+img{
+max-width:100%;
+border-radius:15px;
+transition:0.4s;
+}
+
+img:hover{
+transform:scale(1.03);
+}
+
+/* Premium Section Entry */
+
+.section,
+.quote-section,
+.dedication{
+animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.card h3{
+font-size:1.35rem;
+font-weight:700;
+}
+
+.card p{
+opacity:0.92;
+}
+
+body::after{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background-image:
+linear-gradient(
+rgba(255,255,255,0.03) 1px,
+transparent 1px
+),
+linear-gradient(
+90deg,
+rgba(255,255,255,0.03) 1px,
+transparent 1px
+);
+
+background-size:50px 50px;
+
+pointer-events:none;
+z-index:-2;
 }
